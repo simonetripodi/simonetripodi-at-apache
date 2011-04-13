@@ -1,0 +1,92 @@
+                                    ------
+                                    Projects - [at]digester
+                                    ------
+                                    Simone Tripodi
+                                    ------
+                                     2010
+
+Apache Commons - Digester
+
+  After being voted as ASF committer, I asked the Commons PMC to start a new
+  sandbox component, recently merged on the current Digester <<</trunk>>>,
+  that I call <@Digester>: inspired by the basic idea behind the JPA, JAXB's specifications, the
+  digester-annotations package would add some facilities to configure
+  the commons-digester using the Java5 language metadata annotations
+  support, it means creating the digester ruleset introspecting the
+  target POJOs, using a provided set of annotations. Using the annotated
+  Java object it's possible to create, at runtime, the digester parser,
+  avoiding manual updates.
+
+  Given the following XML snippet:
+
++--------------------------------------+
+<web-app>
+[...]
+  <servlet>
+      <servlet-name>action</servlet-name>
+      <servlet-class>org.apache.struts.action.ActionServlet</servlet-class>
+      <init-param>
+          <param-name>application</param-name>
+          <param-value>org.apache.struts.example.ApplicationResources</param-value>
+      </init-param>
+      <init-param>
+          <param-name>config</param-name>
+          <param-value>/WEB-INF/struts-config.xml</param-value>
+      </init-param>
+  </servlet>
+[...]
+</web-app>
++--------------------------------------+
+
+  It could be mapped in the following way:
+
++--------------------------------------+
+@ObjectCreate("web-app/servlet")
+public final class ServletBean {
+
+    @BeanPropertySetter(pattern = "web-app/servlet/servlet-name")
+    private String servletName;
+
+    @BeanPropertySetter(pattern = "web-app/servlet/servlet-class")
+    private String servletClass;
+
+    private final Map<String, String> initParams = new HashMap<String, String>();
+
+    public String getServletName() {
+        return this.servletName;
+    }
+
+    public void setServletName(String servletName) {
+        this.servletName = servletName;
+    }
+
+    public String getServletClass() {
+        return this.servletClass;
+    }
+
+    public void setServletClass(String servletClass) {
+        this.servletClass = servletClass;
+    }
+
+    @CallMethod(pattern = "web-app/servlet/init-param")
+    public void addInitParam(@CallParam(pattern = "web-app/servlet/init-param/param-name")
+        String name,
+        @CallParam(pattern = "web-app/servlet/init-param/param-value") String value) {
+        this.initParams.put(name, value);
+    }
+
+    [...]
+
+}
++--------------------------------------+
+
+  and a special DigesterLoader is able to create Digester rules simply by
+  analyzing the ServletBean class:
+
++--------------------------------------+
+DigesterLoader digesterLoader = new DigesterLoaderBuilder()
+                                    .useDefaultAnnotationRuleProviderFactory()
+                                    .useDefaultDigesterLoaderHandlerFactory();
+
+Digester digester = digesterLoader.createDigester(ServletBean.class);
++--------------------------------------+

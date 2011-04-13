@@ -1,0 +1,53 @@
+                                    ------
+                                    Projects
+                                    ------
+                                    Simone Tripodi
+                                    ------
+                                     2010
+
+Apache Cocoon 3
+
+  The aspect which I'm focused on the Apache Cocoon3 is the SAX XML pipeline
+  component, one of the lower level software layer in Cocoon3.
+
+  <Using pipelines in Java has never been so easy!!!>
+
++--------------------------------------+
+URL base = this.getClass().getResource("http://com.acme/");
+URL feed = new URL(base, "feed.xml");
+
+Pipeline<SAXPipelineComponent> pipeline = new NonCachingPipeline<SAXPipelineComponent>();
+// read the source
+pipeline.addComponent(new XMLGenerator(feed));
+// XInclude process the source
+pipeline.addComponent(new XIncludeTransformer(base));
+// Transform the processed document
+pipeline.addComponent(new XSLTTransformer(this.getClass().getResource("/trax.xslt")));
+// validate the transformation
+pipeline.addComponent(new SchemaProcessorTransformer(this.getClass().getResource("/validate.xsd")));
+// serializes the validated transformed doc
+pipeline.addComponent(new XMLSerializer());
+
+// setup and run!
+OutputStream out = [...]
+pipeline.setup(out);
+pipeline.execute();
++--------------------------------------+
+
+  Even if that APIs make easier manipulating pipelines, I was looking for a more fluent APIs so I started prototyping
+  a chained builders, so pipelines can be also created via:
+
++--------------------------------------+
+URL base = this.getClass().getResource("http://com.acme/");
+URL feed = new URL(base, "feed.xml");
+
+new SAXPipelineBuilder().newNonCachingPipeline()
+            .setURLGenerator(feed)
+            .addXIncludeTransformer(base)
+            .addXSLTTransformer(this.getClass().getResource("/trax.xslt"))
+            .addSchemaProcessorTransformer(this.getClass().getResource("/validate.xsd"))
+            .addSerializer()
+            .withEmptyConfiguration()
+            .setup(baos)
+            .execute();
++--------------------------------------+

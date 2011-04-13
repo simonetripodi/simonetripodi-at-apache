@@ -1,0 +1,88 @@
+                                    ------
+                                    Projects - Bean Validation
+                                    ------
+                                    Simone Tripodi
+                                    ------
+                                     2010
+
+Apache Bean Validation
+
+  The Apache Bean Validation projects aims to be the JSR303 Apache branded
+  reference implementation, providing some extention points that add value to
+  the Bean Validation specification.
+
+  I created, thanks to Gerhard Petracek and Carlos Vara's suggestions, an
+  integration module between Google Guice and Apache Bean Validation that aims
+  to:
+
+  * bootstrap Apache Bean Validation using Google Guice;
+
+  * obtain <<<ConstraintValidator>>> instances using the Google Guice Injector,
+  to easily support the DI;
+
+  * easily inject the <<<Validator>>> reference into components that require it;
+
+  * easily intercept methods and validate method arguments.
+
+  []
+
+  Just to give you a quick example, when creating the Google Guice Injector just
+  plug the <<<org.apache.bval.guice.ValidationModule>>>:
+
++--------------------------------------+
+import com.google.inject.Guice;
+import com.google.inject.Injector;
+
+import org.apache.bval.guice.ValidationModule;
+
+Injector injector = Guice.createInjector([...], new ValidationModule(), [...]);
++--------------------------------------+
+
+  Clients now can easily inject <<<javax.validation.Validator>>> instances into
+  custom components:
+
++--------------------------------------+
+import javax.validation.Validator;
+
+public class MyValidatorClient {
+
+    @Inject
+    private Validator validator;
+
+    public void setValidator(Validator validator) {
+        this.validator = validator;
+    }
+
+    ...
+
+}
++--------------------------------------+
+
+  or even easily validate methods arguments:
+
++--------------------------------------+
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Size;
+
+import org.apache.bval.guice.Validate;
+
+public class MyService {
+
+    @Validate(
+            groups = { MyGroup.class },
+            validateReturnedValue = true
+    )
+    public Country insertCountry(@NotNull(groups = { MyGroup.class })
+            String name,
+            @NotNull(groups = { MyGroup.class })
+            @Size(max = 2, groups = { MyGroup.class, MyOtherGroup.class })
+            String iso2Code,
+            @NotNull(groups = { MyGroup.class })
+            @Size(max = 3, groups = { MyGroup.class, MyOtherGroup.class })
+            String iso3Code) {
+
+        return ...;
+    }
+
+}
++--------------------------------------+

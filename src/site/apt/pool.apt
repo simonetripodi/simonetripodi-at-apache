@@ -1,0 +1,41 @@
+                                    ------
+                                    Home
+                                    ------
+                                    Simone Tripodi
+                                    ------
+                                     2011
+
+Apache Commons - Pool
+
+  After Digester 2.1 with {{{./at-digester.html}annotations}} support was released, I was looking
+  for new features to add but I'd been busy due to my main job.
+
+  And because of this, I started writing a component for a customer using extensively the
+  {{{http://commons.apache.org/pool}Commons Pool}} component for pooling many kind of objects... but I quickly got lost:
+  I had 2-3 pool references in a big class instance, so when invoking:
+
++--------------------------------------+
+Object obj = myPoolReference3.borrowObject()
++--------------------------------------+
+
+  it was natural wondering: "hey, <<<myPoolReference3>>> is a pool of WHAT?!?!" :D
+
+  I was lucky because in the Commons Dev ML a discussion about Commons Pool 2.0 just started, so I volunteered to add
+  the Java5 Generics support on pools. So I can safely invoke now:
+
++--------------------------------------+
+ObjectPool<MyPooleObjectType> myPoolReference = ...
+
+MyPooleObjectType obj = myPoolReference.borrowObject();
++--------------------------------------+
+
+  Same thing for <<<KeyedObjectPool>>>>:
+
++--------------------------------------+
+KeyedObjectPool<MyKeyType, MyPooleObjectType> myKeyedPoolReference = ...;
+
+MyKeyType keyRef = ...;
+MyPooleObjectType obj = myKeyedPoolReference.borrowObject(keyRef);
++--------------------------------------+
+
+  more clean, no? :)
