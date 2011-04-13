@@ -42,6 +42,7 @@
             <item name="Apache Amber" href="amber.html" />
             <item name="Apache Commons - Digester" href="at-digester.html" />
             <item name="Apache Commons - Pool" href="pool.html" />
+            <item name="Apache Commons - Discovery" href="discovery.html" />
         </menu>
 
         <menu name="External Links">
@@ -50,6 +51,7 @@
             <item name="Apache Amber" href="http://incubator.apache.org/projects/amber.html" />
             <item name="Apache commons-digester" href="http://commons.apache.org/digester/" />
             <item name="Apache commons-pool" href="http://commons.apache.org/pool/" />
+            <item name="Apache commons-discovery" href="http://commons.apache.org/discovery/" />
         </menu>
 
         <menu ref="reports" />

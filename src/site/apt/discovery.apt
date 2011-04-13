@@ -1,0 +1,50 @@
+                                    ------
+                                    Home
+                                    ------
+                                    Simone Tripodi
+                                    ------
+                                     2011
+
+Apache Commons - Discovery
+
+  I recently had to use the Commons-Discovery to discover services at runtime and plug them in Google-Guice
+
+  I quickly got bored by writing pieces of code like:
+
++--------------------------------------+
+Injector injector = Guice.createInjector(new AbstractModule() {
+
+    @Override
+    protected void configure() {
+        ...
+        DiscoverClass discoverClass = new DiscoverClass();
+        bind(ServiceInterface.class).to((ServiceInterface) discoverClass.find(ServiceInterface.class));
+        ...
+    }
+
+});
++--------------------------------------+
+
+  bleah :D The type cast really sucks, indeed :P
+
+  I love statically typed languages and Java offers a fantastic feature called Generic :)
+  With {{{./pool.html}Commons Pool}} I understood how powerful can become a library just adding Generics so I proposed
+  to add that support on Discovery.
+
+  Old discoveries now look like:
+
++--------------------------------------+
+Injector injector = Guice.createInjector(new AbstractModule() {
+
+    @Override
+    protected void configure() {
+        ...
+        DiscoverClass discoverClass = new DiscoverClass();
+        bind(ServiceInterface.class).to(discoverClass.find(ServiceInterface.class));
+        ...
+    }
+
+});
++--------------------------------------+
+
+  and once again I can say: more clean, no? :)
