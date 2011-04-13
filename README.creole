@@ -1,0 +1,2 @@
+If you are curious what I'm working on at The Apache Software Foundation, check out my home page at
+[[http://people.apache.org/~simonetripodi|people.apache.org]]
