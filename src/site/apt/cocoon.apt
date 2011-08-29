@@ -51,3 +51,8 @@ new SAXPipelineBuilder().newNonCachingPipeline()
             .setup(baos)
             .execute();
 +--------------------------------------+
+
+Apache Cocoon Chair!
+
+  The Apache Cocoon PMC unanimously voted me, after Vadim Gritsenko resignation, with 15 positive votes for and none
+  against, as new Apache Cocoon Chair on July 28, 2011... 2011 has been an amazing OSS year!!!
