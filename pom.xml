@@ -64,8 +64,8 @@
             <id>simone.tripodi</id>
             <name>Simone Tripodi</name>
             <email>simonetripodi at apache dot org</email>
-            <organization>Sourcesense Srl</organization>
-            <organizationUrl>http://www.sourcesense.com/</organizationUrl>
+            <organization>Terradue Srl</organization>
+            <organizationUrl>http://www.terradue.com/</organizationUrl>
             <roles>
                 <role>Owner</role>
                 <role>Committer</role>
