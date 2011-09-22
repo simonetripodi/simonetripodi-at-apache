@@ -56,6 +56,18 @@
             <item name="Apache commons-discovery" href="http://commons.apache.org/discovery/" />
         </menu>
 
+        <menu name="Apache close friends (in alphabetical order!)">
+            <item name="Christian Grobmeier" href="http://people.apache.org/~grobmeier" />
+            <item name="Francesco Chicchiricco" href="http://people.apache.org/~ilgrosso" />
+            <item name="Maurizio Cucchiara" href="http://people.apache.org/~mcucchiara" />
+            <item name="Matt Benson" href="http://people.apache.org/~mbenson" />
+            <item name="Olivier Lamy" href="http://people.apache.org/~olamy" />
+            <item name="Reinhard Poetz" href="http://people.apache.org/~reinhard" />
+            <item name="Simone Gianni" href="http://people.apache.org/~simoneg" />
+            <item name="Steven Dolg" href="http://people.apache.org/~stevendolg" />
+            <item name="Tommaso Teofili" href="http://people.apache.org/~tommaso" />
+        </menu>
+
         <menu ref="reports" />
     </body>
 
