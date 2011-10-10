@@ -17,9 +17,9 @@
 <project name="${project.name}">
 
     <skin>
-        <groupId>org.99soft</groupId>
-        <artifactId>fluido-skin</artifactId>
-        <version>1</version>
+        <groupId>org.apache.maven</groupId>
+        <artifactId>maven-fluido-skin</artifactId>
+        <version>1.0-SNAPSHOT</version>
     </skin>
 
     <bannerLeft>
@@ -31,6 +31,16 @@
     <version position="left" />
 
     <body>
+        <links>
+          <item name="Cocoon 3" href="http://cocoon.apache.org//3.0/index.html" />
+            <item name="BVAL" href="http://incubator.apache.org/projects/beanvalidation.html" />
+            <item name="Amber" href="http://incubator.apache.org/projects/amber.html" />
+            <item name="Any23" href="http://incubator.apache.org/any23/" />
+            <item name="Commons" href="http://commons.apache.org/" />
+            <item name="DirectMemory" href="http://incubator.apache.org/directmemory/" />
+            <item name="Labs" href="http://labs.apache.org/" />
+        </links>
+
         <menu name="${project.name}">
             <item name="Home" href="index.html" />
             <item name="Contacts" href="contacts.html" />
@@ -45,15 +55,6 @@
             <item name="Apache Commons - Discovery" href="discovery.html" />
             <item name="Apache Labs" href="labs.html" />
             <item name="Apache Membership" href="membership.html" />
-        </menu>
-
-        <menu name="External Links">
-            <item name="Apache Cocoon 3" href="http://cocoon.apache.org//3.0/index.html" />
-            <item name="Apache Bean Validation" href="http://incubator.apache.org/projects/beanvalidation.html" />
-            <item name="Apache Amber" href="http://incubator.apache.org/projects/amber.html" />
-            <item name="Apache commons-digester" href="http://commons.apache.org/digester/" />
-            <item name="Apache commons-pool" href="http://commons.apache.org/pool/" />
-            <item name="Apache commons-discovery" href="http://commons.apache.org/discovery/" />
         </menu>
 
         <menu name="Apache close friends (in alphabetical order!)">
