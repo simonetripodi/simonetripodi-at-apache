@@ -17,7 +17,7 @@
 <project name="${project.name}">
 
     <skin>
-        <groupId>org.apache.maven</groupId>
+        <groupId>org.apache.maven.skins</groupId>
         <artifactId>maven-fluido-skin</artifactId>
         <version>1.0-SNAPSHOT</version>
     </skin>
