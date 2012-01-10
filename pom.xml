@@ -7,21 +7,26 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
   <modelVersion>4.0.0</modelVersion>
+
   <groupId>org.apache.people</groupId>
   <artifactId>simonetripodi</artifactId>
-  <packaging>pom</packaging>
   <version>1.0</version>
+  <packaging>pom</packaging>
+
   <name>Simone Tripodi at ASF</name>
   <url>http://people.apache.org/~simonetripodi/</url>
+
   <organization>
     <name>The Apache Software Foundation</name>
     <url>http://www.apache.org/</url>
   </organization>
+
   <scm>
     <url>http://github.com/99soft/simonetripodi-at-apache</url>
     <connection>scm:git:ssh://github.com/99soft/simonetripodi-at-apache.git</connection>
     <developerConnection>scm:git:git+ssh://git@github.com/99soft/simonetripodi-at-apache.git</developerConnection>
   </scm>
+
   <mailingLists>
     <mailingList>
       <name>Personal mail</name>
@@ -29,18 +34,21 @@
       <archive>archives are my mail box ! :)</archive>
     </mailingList>
   </mailingLists>
+
   <licenses>
     <license>
       <name>Apache License 2.0</name>
       <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
     </license>
   </licenses>
+
   <distributionManagement>
     <site>
       <id>apache.website</id>
       <url>scp://people.apache.org/home/simonetripodi/public_html</url>
     </site>
   </distributionManagement>
+
   <developers>
     <developer>
       <id>simone.tripodi</id>
@@ -55,10 +63,12 @@
       <timezone>+1</timezone>
     </developer>
   </developers>
+
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
   </properties>
+
   <build>
     <plugins>
       <plugin>
@@ -85,6 +95,7 @@
         </configuration>
       </plugin>
     </plugins>
+
     <extensions>
       <extension>
         <groupId>org.apache.maven.wagon</groupId>
@@ -93,4 +104,5 @@
       </extension>
     </extensions>
   </build>
+
 </project>
