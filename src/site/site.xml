@@ -45,6 +45,7 @@
       <item name="Any23" href="http://incubator.apache.org/any23/" />
       <item name="Commons" href="http://commons.apache.org/" />
       <item name="DirectMemory" href="http://incubator.apache.org/directmemory/" />
+      <item name="Maven" href="http://maven.apache.org/" />
       <item name="Labs" href="http://labs.apache.org/" />
     </links>
 
@@ -61,6 +62,7 @@
       <item name="Apache Commons - Pool" href="pool.html" />
       <item name="Apache Commons - Discovery" href="discovery.html" />
       <item name="Apache Labs" href="labs.html" />
+      <item name="Apache Maven" href="maven.html" />
       <item name="Apache Membership" href="membership.html" />
     </menu>
 
