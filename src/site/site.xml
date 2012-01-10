@@ -1,75 +1,75 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
-    Copyright 2009-2011 Simone Tripodi
+  Copyright 2009-2011 Simone Tripodi
 
-    Licensed under the Apache License, Version 2.0 (the "License");
-    you may not use this file except in compliance with the License.
-    You may obtain a copy of the License at
+  Licensed under the Apache License, Version 2.0 (the "License");
+  you may not use this file except in compliance with the License.
+  You may obtain a copy of the License at
 
-        http://www.apache.org/licenses/LICENSE-2.0
+    http://www.apache.org/licenses/LICENSE-2.0
 
-    Unless required by applicable law or agreed to in writing, software
-    distributed under the License is distributed on an "AS IS" BASIS,
-    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-    See the License for the specific language governing permissions and
-    limitations under the License.
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License.
 -->
 <project name="${project.name}">
 
-    <skin>
-        <groupId>org.apache.maven.skins</groupId>
-        <artifactId>maven-fluido-skin</artifactId>
-        <version>1.0</version>
-    </skin>
+  <skin>
+    <groupId>org.apache.maven.skins</groupId>
+    <artifactId>maven-fluido-skin</artifactId>
+    <version>1.0</version>
+  </skin>
 
-    <bannerLeft>
-        <name>${project.name}</name>
-        <src>images/logo.png</src>
-        <href>http://people.apache.org/~simonetripodi</href>
-    </bannerLeft>
+  <bannerLeft>
+    <name>${project.name}</name>
+    <src>images/logo.png</src>
+    <href>http://people.apache.org/~simonetripodi</href>
+  </bannerLeft>
 
-    <version position="left" />
+  <version position="left" />
 
-    <body>
-        <links>
-          <item name="Cocoon 3" href="http://cocoon.apache.org//3.0/index.html" />
-            <item name="BVAL" href="http://incubator.apache.org/projects/beanvalidation.html" />
-            <item name="Amber" href="http://incubator.apache.org/projects/amber.html" />
-            <item name="Any23" href="http://incubator.apache.org/any23/" />
-            <item name="Commons" href="http://commons.apache.org/" />
-            <item name="DirectMemory" href="http://incubator.apache.org/directmemory/" />
-            <item name="Labs" href="http://labs.apache.org/" />
-        </links>
+  <body>
+    <links>
+      <item name="Cocoon 3" href="http://cocoon.apache.org//3.0/index.html" />
+      <item name="BVAL" href="http://incubator.apache.org/projects/beanvalidation.html" />
+      <item name="Amber" href="http://incubator.apache.org/projects/amber.html" />
+      <item name="Any23" href="http://incubator.apache.org/any23/" />
+      <item name="Commons" href="http://commons.apache.org/" />
+      <item name="DirectMemory" href="http://incubator.apache.org/directmemory/" />
+      <item name="Labs" href="http://labs.apache.org/" />
+    </links>
 
-        <menu name="${project.name}">
-            <item name="Home" href="index.html" />
-            <item name="Contacts" href="contacts.html" />
-        </menu>
+    <menu name="${project.name}">
+      <item name="Home" href="index.html" />
+      <item name="Contacts" href="contacts.html" />
+    </menu>
 
-        <menu name="Apache Projects">
-            <item name="Apache Cocoon 3" href="cocoon.html" />
-            <item name="Apache Bean Validation" href="bval.html" />
-            <item name="Apache Amber" href="amber.html" />
-            <item name="Apache Commons - Digester" href="at-digester.html" />
-            <item name="Apache Commons - Pool" href="pool.html" />
-            <item name="Apache Commons - Discovery" href="discovery.html" />
-            <item name="Apache Labs" href="labs.html" />
-            <item name="Apache Membership" href="membership.html" />
-        </menu>
+    <menu name="Apache Projects">
+      <item name="Apache Cocoon 3" href="cocoon.html" />
+      <item name="Apache Bean Validation" href="bval.html" />
+      <item name="Apache Amber" href="amber.html" />
+      <item name="Apache Commons - Digester" href="at-digester.html" />
+      <item name="Apache Commons - Pool" href="pool.html" />
+      <item name="Apache Commons - Discovery" href="discovery.html" />
+      <item name="Apache Labs" href="labs.html" />
+      <item name="Apache Membership" href="membership.html" />
+    </menu>
 
-        <menu name="Apache close friends (in alphabetical order!)">
-            <item name="Christian Grobmeier" href="http://people.apache.org/~grobmeier" />
-            <item name="Francesco Chicchiricco" href="http://people.apache.org/~ilgrosso" />
-            <item name="Maurizio Cucchiara" href="http://people.apache.org/~mcucchiara" />
-            <item name="Matt Benson" href="http://people.apache.org/~mbenson" />
-            <item name="Olivier Lamy" href="http://people.apache.org/~olamy" />
-            <item name="Reinhard Poetz" href="http://people.apache.org/~reinhard" />
-            <item name="Simone Gianni" href="http://people.apache.org/~simoneg" />
-            <item name="Steven Dolg" href="http://people.apache.org/~stevendolg" />
-            <item name="Tommaso Teofili" href="http://people.apache.org/~tommaso" />
-        </menu>
+    <menu name="Apache friends">
+      <item name="Christian Grobmeier" href="http://people.apache.org/~grobmeier" />
+      <item name="Francesco Chicchiricco" href="http://people.apache.org/~ilgrosso" />
+      <item name="Maurizio Cucchiara" href="http://people.apache.org/~mcucchiara" />
+      <item name="Matt Benson" href="http://people.apache.org/~mbenson" />
+      <item name="Olivier Lamy" href="http://people.apache.org/~olamy" />
+      <item name="Reinhard Poetz" href="http://people.apache.org/~reinhard" />
+      <item name="Simone Gianni" href="http://people.apache.org/~simoneg" />
+      <item name="Steven Dolg" href="http://people.apache.org/~stevendolg" />
+      <item name="Tommaso Teofili" href="http://people.apache.org/~tommaso" />
+    </menu>
 
-        <menu ref="reports" />
-    </body>
+    <menu ref="reports" />
+  </body>
 
 </project>
