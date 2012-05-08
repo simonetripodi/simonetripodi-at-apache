@@ -39,11 +39,10 @@
 
   <body>
     <links>
-      <item name="Any23" href="http://incubator.apache.org/any23/" />
-      <item name="Cocoon 3" href="http://cocoon.apache.org//3.0/index.html" />
-      <item name="BVAL" href="http://incubator.apache.org/projects/beanvalidation.html" />
       <item name="Amber" href="http://incubator.apache.org/projects/amber.html" />
       <item name="Any23" href="http://incubator.apache.org/any23/" />
+      <item name="BVal" href="http://incubator.apache.org/projects/beanvalidation.html" />
+      <item name="Cocoon 3" href="http://cocoon.apache.org//3.0/index.html" />
       <item name="Commons" href="http://commons.apache.org/" />
       <item name="DirectMemory" href="http://incubator.apache.org/directmemory/" />
       <item name="Maven" href="http://maven.apache.org/" />
@@ -56,13 +55,14 @@
     </menu>
 
     <menu name="Apache Projects">
-      <item name="Apache Any23" href="any23.html" />
-      <item name="Apache Cocoon 3" href="cocoon.html" />
-      <item name="Apache Bean Validation" href="bval.html" />
       <item name="Apache Amber" href="amber.html" />
+      <item name="Apache Any23" href="any23.html" />
+      <item name="Apache Bean Validation" href="bval.html" />
+      <item name="Apache Cocoon 3" href="cocoon.html" />
       <item name="Apache Commons - Digester" href="at-digester.html" />
       <item name="Apache Commons - Pool" href="pool.html" />
       <item name="Apache Commons - Discovery" href="discovery.html" />
+      <item name="Apache DirectMemory" href="directmemory.html" />
       <item name="Apache Labs" href="labs.html" />
       <item name="Apache Maven" href="maven.html" />
       <item name="Apache Membership" href="membership.html" />
@@ -70,9 +70,11 @@
 
     <menu name="Apache friends">
       <item name="Christian Grobmeier" href="http://people.apache.org/~grobmeier" />
+      <item name="Davide Palmisano" href="http://people.apache.org/~dpalmisano" />
       <item name="Francesco Chicchiricco" href="http://people.apache.org/~ilgrosso" />
       <item name="Maurizio Cucchiara" href="http://people.apache.org/~mcucchiara" />
       <item name="Matt Benson" href="http://people.apache.org/~mbenson" />
+      <item name="Michele Mostarda" href="http://people.apache.org/~mostarda" />
       <item name="Olivier Lamy" href="http://people.apache.org/~olamy" />
       <item name="Reinhard Poetz" href="http://people.apache.org/~reinhard" />
       <item name="Simone Gianni" href="http://people.apache.org/~simoneg" />
