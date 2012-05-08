@@ -47,6 +47,7 @@
       <item name="DirectMemory" href="http://incubator.apache.org/directmemory/" />
       <item name="Maven" href="http://maven.apache.org/" />
       <item name="Labs" href="http://labs.apache.org/" />
+      <item name="Syncope" href="http://incubator.apache.org/syncope/" />
     </links>
 
     <menu name="${project.name}">
@@ -66,6 +67,7 @@
       <item name="Apache Labs" href="labs.html" />
       <item name="Apache Maven" href="maven.html" />
       <item name="Apache Membership" href="membership.html" />
+      <item name="Apache Syncope" href="syncope.html" />
     </menu>
 
     <menu name="Apache friends">
