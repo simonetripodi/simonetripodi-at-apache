@@ -1,0 +1,19 @@
+                                    ------
+                                    Home
+                                    ------
+                                    Simone Tripodi
+                                    ------
+                                     2009-2012
+
+Apache DirectMemory
+
+  I met {{{http://people.apache.org/~raffaeleguidi}Raffaele Guidi}} on {{{https://twitter.com/#!/raffaeleguidi}Twitter}}
+  and I started following him because he's the original creator of
+  {{{http://raffaeleguidi.wordpress.com/2011/10/07/goodbye-directmemory-welcome-apache-directmemory/}Direct Memory}},
+  the first 100% free and OpenSource project that aims to implement an Off-Heap Java memory manager, competing with
+  the commercial Terracotta's {{{http://terracotta.org/products/bigmemory}Big Memory}}.
+
+  So, I started becoming interested on the project evolvement as well as other smart guys - it was time to create a
+  community around that!
+
+  So here we are, long live to {{{http://incubator.apache.org/directmemory/}Apache DirectMemory}}!
