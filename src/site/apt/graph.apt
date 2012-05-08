@@ -75,4 +75,7 @@ UndirectedMutableGraph<V, E> input = ...;
 Graph<V, E> visitGraph = visit( input ).from( start ).applyingBreadthFirstSearch();
 +--------------------------------------+
 
-  Yet another case where strong typing and fluent APIs simplify the Graph manipulation.
+  Yet another case where strong typing and fluent APIs simplify the Graph manipulation :)
+
+  Of course, the project wouldn't be in that wonderful state without the help of great friends such as
+  {{{http://people.apache.org/~cs}Claudio Squarcella}} and {{{http://people.apache.org/~marcosperanza}Marco Speranza}}
