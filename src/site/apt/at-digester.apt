@@ -90,3 +90,37 @@ DigesterLoader digesterLoader = new DigesterLoaderBuilder()
 
 Digester digester = digesterLoader.createDigester(ServletBean.class);
 +--------------------------------------+
+
+Digester3 Update!
+
+  During the time, I worked in a revolutionary Digester APIs which aims to create a single Loader layer to load rules.
+
+  I addressed all my concerns on the Digester3 {{{http://commons.apache.org/digester/guide/binder.html}Rules Binder}}
+  which foundations are fluent APIs:
+
++--------------------------------------+
+private final DigesterLoader loader = newLoader( AbstractRulesModule()
+{
+
+    @Override
+    protected void configure()
+    {
+        forPattern( "employee" ).createObject().ofType( Employee.class );
+        forPattern( "employee/firstName" ).setBeanProperty();
+        forPattern( "employee/lastName" ).setBeanProperty();
+
+        forPattern( "employee/address" )
+            .createObject().ofType( Address.class )
+            .then()
+            .setNext( "addAddress");
+        forPattern( "employee/address/type" ).setBeanProperty();
+        forPattern( "employee/address/city" ).setBeanProperty();
+        forPattern( "employee/address/state" ).setBeanProperty();
+    }
+
+} )
+.setNamespaceAware( true )
+.setXIncludeAware( true );
++--------------------------------------+
+
+  once again: isn't more clear? :)
