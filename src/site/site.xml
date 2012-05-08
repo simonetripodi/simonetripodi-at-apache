@@ -73,9 +73,11 @@
 
     <menu name="Apache friends">
       <item name="Christian Grobmeier" href="http://people.apache.org/~grobmeier" />
+      <item name="Claudio Squarcella" href="http://people.apache.org/~cs" />
       <item name="Davide Palmisano" href="http://people.apache.org/~dpalmisano" />
       <item name="Francesco Chicchiricco" href="http://people.apache.org/~ilgrosso" />
       <item name="Maurizio Cucchiara" href="http://people.apache.org/~mcucchiara" />
+      <item name="Marco Speranza" href="http://people.apache.org/~marcosperanza" />
       <item name="Matt Benson" href="http://people.apache.org/~mbenson" />
       <item name="Michele Mostarda" href="http://people.apache.org/~mostarda" />
       <item name="Olivier Lamy" href="http://people.apache.org/~olamy" />
