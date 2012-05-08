@@ -39,6 +39,7 @@
 
   <body>
     <links>
+      <item name="Any23" href="http://incubator.apache.org/any23/" />
       <item name="Cocoon 3" href="http://cocoon.apache.org//3.0/index.html" />
       <item name="BVAL" href="http://incubator.apache.org/projects/beanvalidation.html" />
       <item name="Amber" href="http://incubator.apache.org/projects/amber.html" />
@@ -55,6 +56,7 @@
     </menu>
 
     <menu name="Apache Projects">
+      <item name="Apache Any23" href="any23.html" />
       <item name="Apache Cocoon 3" href="cocoon.html" />
       <item name="Apache Bean Validation" href="bval.html" />
       <item name="Apache Amber" href="amber.html" />

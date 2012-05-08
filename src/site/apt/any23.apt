@@ -1,0 +1,22 @@
+                                    ------
+                                    Home
+                                    ------
+                                    Simone Tripodi
+                                    ------
+                                     2009-2012
+
+Apache Any23
+
+  Anything To Triples (any23) is a library, a web service and a command line tool that extracts structured data in RDF
+  format from a variety of Web documents. 
+
+  Original codebase authors {{{http://people.apache.org/~dpalmisano}Davide Palmisano}} and
+  {{{http://people.apache.org/~mostarda}Michele Mostarda}} are close friends of mine and we co-worked together at
+  Asemantics, one of the the leading Semantic web company in Europe.
+
+  When we left the company, they continued doing research on SemWeb technologies and created a beautiful and well known
+  in the Semantic creek, Any23.
+
+  During summer 2011, Michele and I met in Rome for a lunch and started thinking about donating Any23 to the ASF: voil‡,
+  in less than one month we successfully created the {{{http://incubator.apache.org/any23/}Apache Any23}} podling!
+ 
