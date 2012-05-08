@@ -1,0 +1,17 @@
+                                    ------
+                                    Home
+                                    ------
+                                    Simone Tripodi
+                                    ------
+                                     2009-2012
+
+Apache Commons - OGNL
+
+  For long-experienced Java developers, OGNL doesn't need any introduction, it is a beautiful piece of
+  software who's served the community for a long time!
+
+  Anyway, original maintainers didn't have more time to dedicate on the project maintenance, and
+  {{{http://struts.apache.org/}Apache Struts}} guys needed it updated in order to improve Struts releases...
+  So it was natural join the efforts and brings the old OGNL to Commons!
+
+  After few months of Incubation, we quickly graduated the component to Commons but not made an official release yet.
