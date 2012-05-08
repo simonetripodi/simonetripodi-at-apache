@@ -1,0 +1,78 @@
+                                    ------
+                                    Home
+                                    ------
+                                    Simone Tripodi
+                                    ------
+                                     2009-2012
+
+Apache Commons - Graph
+
+  Apache Commons Graph is maybe the project I'm more proud of, even if it still in the Sandbox and has not been released yet.
+
+  It aims to maintain a generic set of APIs to:
+
+  * Manipulate Data organized in Graph Structures;
+
+  * apply different domain Algorithms on Graphs, such as shortest path algorithms, flow algorithms and so on.
+
+  Moreover, being influenced by the {{{http://code.google.com/p/google-guice/}Google Guice}} design, I'm trying to
+  design commons-graph according to the following principles:
+
+  * Fluent APIs: I was looking for simplify APIs according to a functional approach;
+
+  * Strong typing: chained API input are conditioned by the previous provided inputs.
+
+  Just to give a couple of examples, I want to show first a graph population APIs showcase:
+
++--------------------------------------+
+import static org.apache.commons.graph.CommonsGraph.newUndirectedMutableGraph;
+
+import org.apache.commons.graph.model.BaseLabeledVertex;
+import org.apache.commons.graph.model.BaseLabeledWeightedEdge;
+import org.apache.commons.graph.model.UndirectedMutableGraph;
+
+...
+
+UndirectedMutableGraph<BaseLabeledVertex, BaseLabeledWeightedEdge<Double>> actual =
+newUndirectedMutableGraph( new AbstractGraphConnection<BaseLabeledVertex, BaseLabeledWeightedEdge<Double>>()
+{
+
+    public void connect()
+    {
+        BaseLabeledVertex start = addVertex( new BaseLabeledVertex( "start" ) );
+        BaseLabeledVertex a = addVertex( new BaseLabeledVertex( "a" ) );
+        BaseLabeledVertex b = addVertex( new BaseLabeledVertex( "b" ) );
+        BaseLabeledVertex c = addVertex( new BaseLabeledVertex( "c" ) );
+        BaseLabeledVertex d = addVertex( new BaseLabeledVertex( "d" ) );
+        BaseLabeledVertex e = addVertex( new BaseLabeledVertex( "e" ) );
+        BaseLabeledVertex goal = addVertex( new BaseLabeledVertex( "goal" ) );
+
+        addEdge( new BaseLabeledWeightedEdge<Double>( "start <-> a", 1.5D ) ).from( start ).to( a );
+        addEdge( new BaseLabeledWeightedEdge<Double>( "start <-> d", 2D ) ).from( start ).to( d );
+
+        addEdge( new BaseLabeledWeightedEdge<Double>( "a <-> b", 2D ) ).from( a ).to( b );
+        addEdge( new BaseLabeledWeightedEdge<Double>( "b <-> c", 3D ) ).from( b ).to( c );
+        addEdge( new BaseLabeledWeightedEdge<Double>( "c <-> goal", 3D ) ).from( c ).to( goal );
+
+        addEdge( new BaseLabeledWeightedEdge<Double>( "d <-> e", 3D ) ).from( d ).to( e );
+        addEdge( new BaseLabeledWeightedEdge<Double>( "e <-> goal", 2D ) ).from( e ).to( goal );
+    }
+
+} );
++--------------------------------------+
+
+  This small sample shows both fluent APIs, on the vertices connections, and strong typing, where Vertices/Edges types
+  are driven by the generics.
+
+  The second sample is about the application of an Algorithm:
+
++--------------------------------------+
+import static org.apache.commons.graph.CommonsGraph.visit;
+
+...
+
+UndirectedMutableGraph<V, E> input = ...;
+Graph<V, E> visitGraph = visit( input ).from( start ).applyingBreadthFirstSearch();
++--------------------------------------+
+
+  Yet another case where strong typing and fluent APIs simplify the Graph manipulation.
